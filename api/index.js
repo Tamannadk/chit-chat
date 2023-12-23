@@ -34,7 +34,7 @@ app.use("/uploads", express.static(__dirname + "/uploads"));
 app.use(express.json());
 app.use(cookieParser());
 const corsOptions = {
-  origin: "https://chit-chat-frontend-1dwm.onrender.com", // Replace with the origin of your client application
+  origin: "https://chit-chat-frontend-k0np.onrender.com", // Replace with the origin of your client application
   credentials: true,
 };
 
