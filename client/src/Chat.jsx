@@ -19,9 +19,7 @@ export default function Chat() {
   }, []);
 
   function connectToWs() {
-    const ws = new WebSocket(
-      "ws://https://chit-chat-backend-vn8p.onrender.com"
-    );
+    const ws = new WebSocket("ws://chit-chat-backend-vn8p.onrender.com");
     setWs(ws);
     ws.addEventListener("message", handleMessage);
     ws.addEventListener("close", () => {
