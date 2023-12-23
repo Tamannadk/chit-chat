@@ -34,7 +34,10 @@ app.use("/uploads", express.static(__dirname + "/uploads"));
 app.use(express.json());
 app.use(cookieParser());
 const corsOptions = {
-  origin: "https://chit-chat-frontend-k0np.onrender.com", // Replace with the origin of your client application
+  origin: [
+    "https://chit-chat-frontend-k0np.onrender.com",
+    "https://clinquant-hotteok-146e42.netlify.app",
+  ], // Replace with the origin of your client application
   credentials: true,
 };
 
