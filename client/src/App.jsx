@@ -2,7 +2,7 @@ import axios from "axios";
 import { UserContextProvider } from "./UserContext";
 import Routes from "./Routes";
 function App() {
-  axios.defaults.baseURL = "http://localhost:4000";
+  axios.defaults.baseURL = "https://chit-chat-backend-vn8p.onrender.com";
   axios.defaults.withCredentials = true;
   return (
     <UserContextProvider>
