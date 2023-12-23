@@ -43,6 +43,10 @@ app.get("/test", (req, res) => {
   res.json("test ok");
 });
 
+app.get("/", (req, res) => {
+  res.json("Welcome to Chit-Chat Backend");
+});
+
 async function getUserDataFromRequest(req) {
   return new Promise((resolve, reject) => {
     const token = req.cookies?.token;
@@ -162,7 +166,7 @@ app.post("/register", async (req, res) => {
     res.status(500).json("error");
   }
 });
-const server = app.listen(4000);
+const server = app.listen(4000 || process.env.PORT);
 
 const wss = new ws.WebSocketServer({ server });
 wss.on("connection", (connection, req) => {
